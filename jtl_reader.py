@@ -37,6 +37,4 @@ def convert_timestamp_to_pst(a):
     return date_time
 
 
-if __name__ == '__main__':
-    read_jtl_with_csv()
-    # convert_timestamp_to_pst(161287.9363730)
+
