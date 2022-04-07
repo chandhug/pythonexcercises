@@ -16,13 +16,13 @@ def read_xml_using_elementtree(x, y):
         if 'TP' in str(x.tag):
             depart_date = x.find('DEPART').text
             # print(f'Current Departure date is : ' + depart_date)
-            depart_date = generate_future_date(10)
+            depart_date = generate_future_date(x)
             print(f'Future Departure date is : ' + depart_date)
             x.find('DEPART').text = str(depart_date)
 
             return_date = x.find('RETURN').text
             # print(f'Current Return date is : ' + return_date)
-            return_date = generate_future_date(40)
+            return_date = generate_future_date(y)
             print(f'Future Return date is : ' + return_date)
             x.find('RETURN').text = str(return_date)
         my_tree.write('updated_test_payload1.xml')

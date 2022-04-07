@@ -26,8 +26,8 @@ def read_jtl_with_csv():
 def convert_timestamp(timestamp):
 
     number = int(timestamp)
-    coverted_number = number % 1e7
-    converted_timestamp = convert_timestamp_to_pst(coverted_number)
+    converted_number = number % 1e7
+    converted_timestamp = convert_timestamp_to_pst(converted_number)
     return converted_timestamp
 
 
